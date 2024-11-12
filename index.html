@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrain.com</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Terrain</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Peaks</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Full-Screen Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Explore the Majestic Mountains</h1>
+            <p>"Getting to the top is optional. Getting down is mandatory."</p>
+            <a href="#products" class="btn">Famous Peaks</a>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="products">
+        <h2>Peaks</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/product1.jpg" alt="Product 1">
+                <h3>Mount Everest</h3>
+                <p>The world's tallest mountain, standing 8848m tall.</p>
+                <a href="https://en.wikipedia.org/wiki/Mount_Everest" class="btn">Learn More</a>
+            </div>
+            <div class="product">
+                <img src="images/product2.jpg" alt="Product 2">
+                <h3>Kangchenjunga</h3>
+                <p>Standing 8586m tall, it is the highest peak in India.</p>
+                <a href="https://en.wikipedia.org/wiki/Kangchenjunga" class="btn">Learn More</a> 
+            </div>
+            <div class="product">
+                <img src="images/product3.jpg" alt="Product 3">
+                <h3>Mount Kilimanjaro</h3>
+                <p>Highest in Africa, Highest free-standing mountain in the world.</p>
+                <a href="https://en.wikipedia.org/wiki/Mount_Kilimanjaro" class="btn">Learn More</a> 
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- Button Slider Section -->
+        <section id="slider" class="slider-section">
+            <h2>Explore Our Services</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <a href="signup.html" class="slide-button">Sign Up</a>
+                    <a href="gearlist.html" class="slide-button">Gear List</a>
+                    <a href="besttimes.html" class="slide-button">Best Times</a>
+                    <a href="trekdetails.html" class="slide-button">Trek Details</a>
+                    <a href="maps.html" class="slide-button">Maps</a>
+                    <a href="https://www.nimsdai.com/post/nimsdai-nims-purja-completes-the-seven-summits" class="slide-button">Blog</a>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="nav-left" onclick="slideLeft()">←</button>
+                <button class="nav-right" onclick="slideRight()">→</button>
+            </div>
+        </section>
+    
+
+    <!-- About Section -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a trekking and mountaineering company focused on bringing adventurous opportunities closer with our innovative, simple, and informative website.</p>
+    
+    <div class="team">
+        <div class="team-member">
+            <img src="images/team1.jpg" alt="Team Member 1">
+            <h3>Rudraksh Bhandari</h3>
+            <p>Mountain Guide & Safety Expert</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team2.jpg" alt="Team Member 2">
+            <h3>Kartik Joshi</h3>
+            <p>Logistics Coordinator</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team3.jpg" alt="Team Member 3">
+            <h3>Harjas Singh Rai</h3>
+            <p>Environmental Specialist</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team4.jpg" alt="Team Member 4">
+            <h3>Himank Goel</h3>
+            <p>Marketing and Social Media Manager</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Terrain. Designed by Team.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

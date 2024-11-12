@@ -1,0 +1,96 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #2b2929;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #424141;
+    font-size: 18px;
+}
+
+.navbar nav ul li a:hover {
+    color: #007aff;
+}
+
+.best-times {
+    padding: 80px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.best-times h1 {
+    font-size: 36px;
+    color: #3d3b3b;
+    margin-bottom: 20px;
+}
+
+.best-times p {
+    font-size: 18px;
+    color: #606060;
+    margin-bottom: 40px;
+}
+
+.trek-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.trek {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.trek h2 {
+    font-size: 24px;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.trek p {
+    font-size: 16px;
+    color: #4d4d4d;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #3f3e3e;
+    color: white;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gear List - Terrain.com</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .hero {
+      background-image: url('mountain-bg.jpg');
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 5rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 4rem;
+      background-color: #fff;
+    }
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    .product-card img {
+      width: 100%;
+      display: block;
+    }
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+    .product-info h3 {
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .product-info a {
+      background-color: #ff4500;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .product-info a:hover {
+      background-color: #ff6347;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Essential Trekking Gear</h1>
+  </section>
+
+  <section class="product-grid">
+    <!-- Trekking Shoes -->
+    <div class="product-card">
+      <img src="images/trekshoe.jpg" alt="Trekking Shoes">
+      <div class="product-info">
+        <h3>High-Performance Shoes</h3>
+        <p>Waterproof and durable.</p>
+        <a href="https://www.amazon.com/s?k=trekking+shoes&crid=L5ITMMWYOX78&sprefix=trekking+shoes%2Caps%2C429&ref=nb_sb_ss_ts-doa-p_3_14" target="_blank">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- Backpacks -->
+    <div class="product-card">
+      <img src="images/backpack.jpg" alt="Backpack">
+      <div class="product-info">
+        <h3>Mountain Backpack</h3>
+        <p>Best for multi-day treks.</p>
+        <a href="https://www.amazon.com/s?k=trekking+backpacks&crid=CW1QTDL4Z8YD&sprefix=trekking+backpac%2Caps%2C432&ref=nb_sb_noss_2" target="_blank">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- 4-Season Tent -->
+    <div class="product-card">
+      <img src="images/camp1.jpg" alt="Tent">
+      <div class="product-info">
+        <h3>4-Season Tent</h3>
+        <p>Weather-resistant and lightweight.</p>
+        <a href="https://www.amazon.in/s?k=4+season+tent+amazon&adgrpid=171839532388&gad_source=1&hvadid=701704522032&hvdev=c&hvlocphy=1007802&hvnetw=g&hvqmt=e&hvrand=2274611864423265291&hvtargid=kwd-586002870672&hydadcr=21174_2211179&tag=googinhydr1-21&ref=pd_sl_3amwba9og4_e" target="_blank">Buy Now</a>
+      </div>
+    </div>
+
+    
+  </section>
+
+</body>
+</html>

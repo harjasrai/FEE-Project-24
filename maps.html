@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trekking Maps - Explore Trails</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            height: 100vh; /* Full screen height for map */
+            width: 100vw;  /* Full screen width */
+        }
+        .leaflet-popup-content-wrapper {
+            background-color: #333;
+            color: #fff;
+        }
+        .leaflet-popup-tip {
+            background-color: #333;
+        }
+        /* Button styles to switch map themes (optional) */
+        .theme-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <!-- Leaflet CSS and JS libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map and set its view to a key trekking area
+        var map = L.map('map').setView([31.774847, 79.596007], 8); // Himalayas starting point
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add markers for trekking locations
+        var gangotri = L.marker([31.774847, 79.596007]).addTo(map)
+            .bindPopup("<b>Gangotri Glacier</b><br>Start of the trek to Gaumukh.");
+
+        var gaumukh = L.marker([31.694847, 79.566007]).addTo(map)
+            .bindPopup("<b>Gaumukh</b><br>Famous for the source of the Ganges.");
+
+        var tapovan = L.marker([31.613427, 79.617801]).addTo(map)
+            .bindPopup("<b>Tapovan</b><br>Challenging trek with mesmerizing views.");
+
+        // Add a trekking route using a polyline
+        var trekRoute = [
+            [31.774847, 79.596007], // Gangotri Glacier
+            [31.694847, 79.566007], // Gaumukh
+            [31.613427, 79.617801], // Tapovan
+        ];
+
+        // Display the route on the map
+        L.polyline(trekRoute, {
+            color: 'blue', // You can change color to highlight the route
+            weight: 4,
+            opacity: 0.7,
+            dashArray: '5, 10' // Makes the line dashed for aesthetic effect
+        }).addTo(map)
+        .bindPopup("Trekking route: Gangotri Glacier to Tapovan.");
+
+        // Adding more markers for different trek locations
+        var kedarnath = L.marker([30.7132, 79.0676]).addTo(map)
+            .bindPopup("<b>Kedarnath</b><br>One of the most famous treks in Uttarakhand.");
+        var everestBaseCamp = L.marker([28.0026, 86.8528]).addTo(map)
+            .bindPopup("<b>Everest Base Camp</b><br>A world-famous trek to the foot of Mount Everest.");
+
+        // Optional: Button to switch between different map themes
+        var isDark = false;
+        var button = document.createElement("button");
+        button.innerHTML = "Switch to Dark Mode";
+        button.className = "theme-button";
+        document.body.appendChild(button);
+
+        button.addEventListener('click', function() {
+            isDark = !isDark;
+            L.tileLayer(isDark ? 
+                'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png' : 
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+            {
+                maxZoom: 18,
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            button.innerHTML = isDark ? "Switch to Light Mode" : "Switch to Dark Mode";
+        });
+
+    </script>
+</body>
+</html>
